@@ -1,10 +1,11 @@
 import ProductsDisplay from "../../components/ProductsDisplay"
+import React from "react"
 
-const Products = () => {
+const Products = ({products}) => {
   return (
     <div>
         <h1>This is the Products Page!</h1>
-        <ProductsDisplay />
+        <ProductsDisplay products={products}/>
     </div>
   )
 }

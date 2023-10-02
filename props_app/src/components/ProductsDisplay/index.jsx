@@ -1,5 +1,5 @@
 
-const ProductsDisplay = () => {
+const ProductsDisplay = ({products, handleProductClick}) => {
 
     const handleProductClick = (id) => {
         // we have the id of the clicked property
@@ -13,7 +13,7 @@ const ProductsDisplay = () => {
     <div>
         {/* we need the products array here */}
         {products.map((product) => {
-            return <div onClick={() => handleProductClick(product.id)}>product.name</div>
+            return <div key={product.id} onClick={() => handleProductClick(product.id)}>{product.name}</div>
         })}
     </div>
   )

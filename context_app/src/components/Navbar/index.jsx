@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom"
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { ProductContext } from "../ProductContext";
 
 const Navbar = () => {
-  
+  const { products } = useContext(ProductContext);
+
   return (
     <div>
-      {/* we need products array here */}
-        <div>Random Product: {products[0]}</div>
-        <Link to="/">Products</Link>
-        <Link to="/cart">Cart</Link>
+      <div>Random Product: {products[0].name}</div>
+      <Link to="/">Products</Link>
+      <Link to="/cart">Cart</Link>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
